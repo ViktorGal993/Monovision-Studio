@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid__container{
+    width: 600px;
+    display: grid;
+    /*grid-template-columns: 300px 300px 300px 300px 300px;
+    grid-template-rows: 100px 100px 100px 100px 100px;*/
+
+    /*grid-template: 60px 60px 60px/400px 300px 200px;*/
+
+    /*row-gap: 20px;
+    column-gap: 10px;*/
+
+    /*grid-template-columns: /* 1fr 1fr 1fr 2fr; == */ /*  repeat(3,1fr) 2fr;*/
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr;  == */ /* grid-template-rows: repeat(5,1fr);*/
+
+    grid-template-columns:repeat(3,minmax(100px, 300px));
+    grid-template-rows:repeat(2,minmax(10px,auto));
+
+    grid-auto-columns:minmax(10px,auto);
+    gap:10px;
+
+}
+
+
+.grid__element{
+    height: 50px;
+    background-color:blueviolet;
+    color:white;
+    line-height: 50px;
+    text-align: center ;
+    font-size: 26px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+button{      
+    margin-top: 100px;
+    width: 200px;
+    height: 100px;
+    background:gold;
+    color:black; 
+    cursor:pointer;   
+}
+
+button:hover{
+    background-color:aqua;
+    color:blue;
+}
+
+button:focus{
+    background-color:black;
+    color:aliceblue;
+}
+
+button:active{
+    background-color:blueviolet;
+}
+
+.weaper{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.circle{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color:green;   
+    border-radius:100%;
+    justify-content: center;
+    align-items:center;    
+}
+
+.circle:nth-child(2n+1){
+    background-color:red;
+}
+
